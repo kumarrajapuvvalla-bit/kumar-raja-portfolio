@@ -1,0 +1,108 @@
+/* ── Override index.css defaults for this section ── */
+.techstack {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: auto !important;   /* natural height instead of 100vh */
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 80px 0 100px;
+}
+
+/* Remove the old absolute-positioned h2 */
+.techstack h2 {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+
+/* ── Inner container ── */
+.ts-inner {
+  margin: 0 auto;
+}
+
+/* ── Heading ── */
+.ts-heading {
+  font-size: 70px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-transform: none;
+  text-align: left;
+}
+
+.ts-heading > span {
+  color: var(--accentColor);
+}
+
+/* ── Stage: card grid + canvas overlay ── */
+.ts-stage {
+  position: relative;
+  min-height: 520px;
+}
+
+/* ── Tool badge grid ── */
+.ts-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 30px 0 30px;
+  align-content: flex-start;
+}
+
+/* Individual pill badge */
+.ts-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 11px 20px;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.ts-card:hover {
+  background: rgba(0, 212, 184, 0.07);
+  border-color: rgba(0, 212, 184, 0.35);
+}
+
+/* Coloured brand dot */
+.ts-card-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Tool name */
+.ts-card-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0e0e0;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+/* ── Canvas — absolute overlay on top of card grid ── */
+.tech-canvas {
+  position: absolute !important;
+  inset: 0;
+  z-index: 1;
+  /* no pointer-events: none — mouse must reach canvas for ball physics */
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 1400px) {
+  .ts-heading { font-size: 50px; }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-heading { font-size: 40px; }
+  .ts-stage { min-height: 380px; }
+  .ts-card { padding: 9px 14px; }
+  .ts-card-name { font-size: 12px; }
+}

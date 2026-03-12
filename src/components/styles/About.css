@@ -29,6 +29,10 @@
   line-height: 1.6;
   letter-spacing: 0.3px;
   padding-top: 12px;
+  text-align: justify;
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 @media only screen and (min-width: 600px) {

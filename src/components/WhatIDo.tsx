@@ -83,17 +83,16 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>PLATFORM ENGINEERING</h3>
-              <h4>Designing and managing scalable cloud infrastructure</h4>
+              <h4>Kubernetes Platforms | GitOps Deployments | Infrastructure as Code | Platform Observability</h4>
               <p>
-                Building secure, scalable infrastructure across multi-cloud environments.
-                From networking and identity management to managed compute and databases, I design
-                cloud platforms that support highly available applications.
+                Designed and maintained a scalable platform to standardize infrastructure, application deployment, and observability.
+                Enabled developer self service through automated infrastructure, Kubernetes platforms, and GitOps-based deployments.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Azure (VNet, Azure AD, Key Vault, Monitor, Log Analytics, AKS)</div>
-                <div className="what-tags">AWS (EC2, ECS, Lambda, IAM, VPC, S3, ALB, RDS, EKS, CloudWatch, Secrets Manager)</div>
-                <div className="what-tags">GCP (Cloud Run, Cloud Functions, Cloud SQL, BigQuery, Dialogflow)</div>
+                <div className="what-tags">Backstage, Kubernetes, Helm, OpenShift, Argo CD, Terraform, Prometheus, Grafana</div>
+                <div className="what-tags">AWS (Elastic Kubernetes Service, CloudWatch, Config, CloudTrail, IAM)</div>
+                <div className="what-tags">Azure (Kubernetes Service, Key Vault)</div>
               </div>
             </div>
             <div className="what-arrow"></div>
@@ -118,19 +117,16 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
             <div className="what-content-in">
               <h3>DEVOPS ENGINEERING</h3>
-              <h4>Automation, CI/CD pipelines, container platforms</h4>
+              <h4>Automation | CI/CD Pipelines | Containerization | Monitoring & Logging</h4>
               <p>
-                Implementing automated delivery pipelines and infrastructure automation
-                to enable fast, reliable deployments. I build containerised environments, implement
-                Infrastructure as Code, and maintain observability for production systems.
+                Designed and implemented automated CI/CD pipelines and infrastructure provisioning across AWS, Azure, and GCP environments.
+                Improved release reliability, deployment speed, and operational visibility through containerized workloads, automated configuration management, and centralized monitoring.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">CI/CD: GitHub Actions, Azure DevOps, Jenkins, Argo CD</div>
-                <div className="what-tags">IaC: Terraform, ARM, CloudFormation</div>
-                <div className="what-tags">Containers & Orchestration: Docker, Kubernetes (AKS, EKS), Helm</div>
-                <div className="what-tags">Monitoring & Logging: Prometheus, Grafana, ELK</div>
-                <div className="what-tags">OS & Scripting: Linux, Python, Bash, Go, YAML</div>
+                <div className="what-tags">GitHub Actions, Azure DevOps, Jenkins, Docker, Ansible, SonarQube, ELK Stack</div>
+                <div className="what-tags">AWS (AWS CloudFormation, AWS CloudWatch)</div>
+                <div className="what-tags">Azure (Azure Resource Manager, Azure Monitor, Log Analytics)</div>
               </div>
             </div>
             <div className="what-arrow"></div>

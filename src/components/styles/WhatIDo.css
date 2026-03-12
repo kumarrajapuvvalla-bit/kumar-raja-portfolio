@@ -74,23 +74,12 @@
 }
 .what-content-in {
   opacity: 0;
-  animation: whatFlicker 0.5s 1 forwards;
+  animation: whatFadeIn 0.4s 1 forwards;
   animation-delay: 1s;
 }
-@keyframes whatFlicker {
-  0%,
-  25%,
-  35%,
-  60% {
-    opacity: 0;
-  }
-
-  30%,
-  50%,
-  40%,
-  100% {
-    opacity: 1;
-  }
+@keyframes whatFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 .what-content::before,
 .what-corner::before,
@@ -199,12 +188,12 @@
   position: absolute;
 }
 .what-content-in {
-  height: 150px;
+  max-height: 150px;
   overflow: hidden;
-  transition: height 0.5s;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
 }
 .what-content-active .what-content-in {
-  height: auto;
+  max-height: 600px;
   overflow: visible;
 }
 .what-content-in h5 {

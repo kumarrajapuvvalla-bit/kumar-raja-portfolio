@@ -14,37 +14,41 @@ import "./styles/TechStack.css";
 
 // ── Tool definitions ──────────────────────────────────────────────────────────
 const techStack = [
-  { label: "Python",              bg: "#3776ab", fg: "#ffffff" },
-  { label: "Bash",                bg: "#4eaa25", fg: "#ffffff" },
-  { label: "YAML",                bg: "#cb171e", fg: "#ffffff" },
-  { label: "JSON",                bg: "#292929", fg: "#ffffff" },
-  { label: "Amazon\nWeb Services",bg: "#ff9900", fg: "#0d0d0d" },
-  { label: "Microsoft\nAzure",    bg: "#0078d4", fg: "#ffffff" },
-  { label: "Docker",              bg: "#2496ed", fg: "#ffffff" },
-  { label: "Kubernetes",          bg: "#326ce5", fg: "#ffffff" },
-  { label: "Helm",                bg: "#0f1689", fg: "#ffffff" },
-  { label: "OpenShift",           bg: "#ee0000", fg: "#ffffff" },
-  { label: "Jenkins",             bg: "#d24939", fg: "#ffffff" },
-  { label: "GitHub\nActions",     bg: "#24292e", fg: "#ffffff" },
-  { label: "Azure\nDevOps",       bg: "#0078d4", fg: "#ffffff" },
-  { label: "Terraform",           bg: "#7b42bc", fg: "#ffffff" },
-  { label: "AWS\nCloudFormation", bg: "#ff9900", fg: "#0d0d0d" },
-  { label: "Azure\nResource Mgr", bg: "#0078d4", fg: "#ffffff" },
-  { label: "Argo CD",             bg: "#ef7b4d", fg: "#ffffff" },
-  { label: "Backstage",           bg: "#9bf0e1", fg: "#0d0d0d" },
-  { label: "Prometheus",          bg: "#e6522c", fg: "#ffffff" },
-  { label: "Grafana",             bg: "#f46800", fg: "#ffffff" },
-  { label: "ELK Stack",           bg: "#005571", fg: "#ffffff" },
-  { label: "AWS\nCloudWatch",     bg: "#ff9900", fg: "#0d0d0d" },
-  { label: "Ansible",             bg: "#ee0000", fg: "#ffffff" },
-  { label: "SonarQube",           bg: "#4e9bcd", fg: "#ffffff" },
-  { label: "Git",                 bg: "#f05032", fg: "#ffffff" },
-  { label: "GitHub",              bg: "#24292e", fg: "#ffffff" },
-  { label: "Bitbucket",           bg: "#0052cc", fg: "#ffffff" },
-  { label: "Jira",                bg: "#0052cc", fg: "#ffffff" },
-  { label: "Slack",               bg: "#4a154b", fg: "#ffffff" },
-  { label: "MySQL",               bg: "#4479a1", fg: "#ffffff" },
-  { label: "PostgreSQL",          bg: "#336791", fg: "#ffffff" },
+  // Core platform — largest
+  { label: "Kubernetes",          bg: "#326ce5", fg: "#ffffff", scale: 1.4 },
+  { label: "Terraform",           bg: "#7b42bc", fg: "#ffffff", scale: 1.4 },
+  { label: "Amazon\nWeb Services",bg: "#ff9900", fg: "#0d0d0d", scale: 1.3 },
+  { label: "Microsoft\nAzure",    bg: "#0078d4", fg: "#ffffff", scale: 1.3 },
+  { label: "Docker",              bg: "#2496ed", fg: "#ffffff", scale: 1.3 },
+  // Key tools — medium-large
+  { label: "Python",              bg: "#3776ab", fg: "#ffffff", scale: 1.1 },
+  { label: "OpenShift",           bg: "#ee0000", fg: "#ffffff", scale: 1.1 },
+  { label: "GitHub\nActions",     bg: "#24292e", fg: "#ffffff", scale: 1.1 },
+  { label: "Azure\nDevOps",       bg: "#0078d4", fg: "#ffffff", scale: 1.1 },
+  { label: "Argo CD",             bg: "#ef7b4d", fg: "#ffffff", scale: 1.1 },
+  { label: "Helm",                bg: "#0f1689", fg: "#ffffff", scale: 1.0 },
+  { label: "Jenkins",             bg: "#d24939", fg: "#ffffff", scale: 1.0 },
+  { label: "Ansible",             bg: "#ee0000", fg: "#ffffff", scale: 1.0 },
+  // Observability & monitoring — medium
+  { label: "Prometheus",          bg: "#e6522c", fg: "#ffffff", scale: 0.9 },
+  { label: "Grafana",             bg: "#f46800", fg: "#ffffff", scale: 0.9 },
+  { label: "Backstage",           bg: "#9bf0e1", fg: "#0d0d0d", scale: 0.9 },
+  { label: "SonarQube",           bg: "#4e9bcd", fg: "#ffffff", scale: 0.9 },
+  { label: "Git",                 bg: "#f05032", fg: "#ffffff", scale: 0.9 },
+  { label: "GitHub",              bg: "#24292e", fg: "#ffffff", scale: 0.9 },
+  // Supporting tools — smaller
+  { label: "ELK Stack",           bg: "#005571", fg: "#ffffff", scale: 0.8 },
+  { label: "AWS\nCloudFormation", bg: "#ff9900", fg: "#0d0d0d", scale: 0.8 },
+  { label: "Azure\nResource Mgr", bg: "#0078d4", fg: "#ffffff", scale: 0.8 },
+  { label: "AWS\nCloudWatch",     bg: "#ff9900", fg: "#0d0d0d", scale: 0.8 },
+  { label: "Bash",                bg: "#4eaa25", fg: "#ffffff", scale: 0.75 },
+  { label: "YAML",                bg: "#cb171e", fg: "#ffffff", scale: 0.75 },
+  { label: "JSON",                bg: "#292929", fg: "#ffffff", scale: 0.75 },
+  { label: "Bitbucket",           bg: "#0052cc", fg: "#ffffff", scale: 0.75 },
+  { label: "Jira",                bg: "#0052cc", fg: "#ffffff", scale: 0.75 },
+  { label: "Slack",               bg: "#4a154b", fg: "#ffffff", scale: 0.75 },
+  { label: "MySQL",               bg: "#4479a1", fg: "#ffffff", scale: 0.75 },
+  { label: "PostgreSQL",          bg: "#336791", fg: "#ffffff", scale: 0.75 },
 ];
 
 // ── Canvas texture for each ball ──────────────────────────────────────────────
@@ -83,8 +87,8 @@ function makeTexture(label: string, bg: string, fg: string): THREE.CanvasTexture
 
 const textures = techStack.map(({ label, bg, fg }) => makeTexture(label, bg, fg));
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
-const spheres = techStack.map((_, i) => ({
-  scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)] as number,
+const spheres = techStack.map((t, i) => ({
+  scale: t.scale,
   textureIndex: i,
 }));
 
@@ -222,7 +226,7 @@ const TechStack = () => {
             <directionalLight position={[0, 5, -4]} intensity={2} />
             <Physics gravity={[0, 0, 0]}>
               <Pointer isActive={isActive} />
-              {spheres.slice(0, 15).map((s, i) => (
+              {spheres.map((s, i) => (
                 <SphereGeo key={i} scale={s.scale}
                   material={materials[s.textureIndex]} isActive={isActive} />
               ))}

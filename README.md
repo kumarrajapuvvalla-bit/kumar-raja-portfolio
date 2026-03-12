@@ -17,7 +17,7 @@ npm install
 npm run dev
 ```
 
-> **Note:** The GSAP Club plugins have been replaced with trial plugins. To host publicly, you'll need Club-level plugins: https://gsap.com/docs/v3/Installation/
+> **Note:** Updated to use standard `gsap` package (v3.14.2) — `gsap-trial` has been removed.
 
 ## License
 

@@ -1,15 +1,23 @@
-# My Portfolio Wesbite - Overview 🚀
+# Kumar Raja Puvvalla — Portfolio
 
-This repository contains the open source version of my porfolio website.
-Do check it out!
+Personal portfolio website for Kumar Raja Puvvalla, Platform & DevOps Engineer.
 
-## Instructions 🛠️
+![Portfolio Preview](public/images/preview.png)
 
-I have modified the gsap club plugins with the trial plugins, but with the trial plugin you cannot host it🔴. So for Club plugins, Check out here: https://gsap.com/docs/v3/Installation/
+## Tech Stack
 
-**Techstack** - React, TypeScript, GSAP, ThreeJS, WebGL, HTML, Css, JavaScript
+**Frontend** — React, TypeScript, Vite, GSAP, Three.js, WebGL, CSS
 
-![Portfolio-Preview](public/images/preview.png)
+**Features** — 3D interactive character, physics-based tech stack balls, scroll-driven animations, GitOps project showcase
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+> **Note:** The GSAP Club plugins have been replaced with trial plugins. To host publicly, you'll need Club-level plugins: https://gsap.com/docs/v3/Installation/
 
 ## License
 

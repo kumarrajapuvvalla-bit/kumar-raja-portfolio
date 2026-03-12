@@ -1,2 +1,1 @@
-declare module "gsap-trial/SplitText";
-declare module "gsap-trial/ScrollSmoother";
+// gsap-trial replaced by standard gsap (all plugins now free)
